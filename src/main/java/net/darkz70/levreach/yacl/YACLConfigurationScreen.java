@@ -1,12 +1,12 @@
-package net.darkz70.figurestone.yacl;
+package net.darkz70.levreach.yacl;
 
 import lombok.experimental.ExtensionMethod;
-import net.darkz70.figurestone.FigureStone;
+import net.darkz70.levreach.LeviathansReach;
 import net.darkz70.figurestonelib.yacl.api.*;
 import net.darkz70.figurestonelib.yacl.extension.SimpleOptionExtension;
 import net.minecraft.client.gui.screens.Screen;
 
-import net.darkz70.figurestone.config.FigureStoneConfig;
+import net.darkz70.levreach.config.LeviathansReachConfig;
 
 @ExtensionMethod(SimpleOptionExtension.class)
 public class YACLConfigurationScreen {
@@ -16,20 +16,20 @@ public class YACLConfigurationScreen {
 	}
 
 	public static Screen createScreen(Screen parent) {
-		FigureStoneConfig defConfig = FigureStoneConfig.getNewInstance();
-		FigureStoneConfig config = FigureStoneConfig.getInstance();
+		LeviathansReachConfig defConfig = LeviathansReachConfig.getNewInstance();
+		LeviathansReachConfig config = LeviathansReachConfig.getInstance();
 
-		return SimpleYACLScreen.startBuilder(FigureStone.MOD_ID, parent, config::saveAsync)
+		return SimpleYACLScreen.startBuilder(LeviathansReach.MOD_ID, parent, config::saveAsync)
 				.categories(getGeneralCategory(defConfig, config))
 				.build();
 	}
 
-	private static SimpleCategory getGeneralCategory(FigureStoneConfig defConfig, FigureStoneConfig config) {
+	private static SimpleCategory getGeneralCategory(LeviathansReachConfig defConfig, LeviathansReachConfig config) {
 		return SimpleCategory.startBuilder("general")
 				.groups(getMainGroup(defConfig, config));
 	}
 
-	private static SimpleGroup getMainGroup(FigureStoneConfig defConfig, FigureStoneConfig config) {
+	private static SimpleGroup getMainGroup(LeviathansReachConfig defConfig, LeviathansReachConfig config) {
 		return SimpleGroup.startBuilder("main").options(
 				SimpleOption.<Boolean>startBuilder("mod_enabled")
 						.withBinding(defConfig.isModEnabled(), config::isModEnabled, config::setModEnabled, true)

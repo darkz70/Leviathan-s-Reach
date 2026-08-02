@@ -14,7 +14,7 @@ pluginManagement {
 		}
 		maven {
 			name "GitHubPackages"
-			url "https://maven.pkg.github.com/darkz70/FigureStonePlugin"
+			url "https://maven.pkg.github.com/darkz70/LeviathansReachPlugin"
 			def ghUser = System.getenv("GITHUB_ACTOR") ?: providers.gradleProperty("gpr.user").getOrNull()
 			def ghToken = System.getenv("GITHUB_TOKEN") ?: providers.gradleProperty("gpr.key").getOrNull()
 			credentials {

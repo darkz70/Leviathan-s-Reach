@@ -16,13 +16,13 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-	        "net.darkz70.figurestone.entrypoint.CommonEntrypoint"
+	        "net.darkz70.levreach.entrypoint.CommonEntrypoint"
         ],
         "client": [
-	        "net.darkz70.figurestone.entrypoint.ClientEntrypoint"
+	        "net.darkz70.levreach.entrypoint.ClientEntrypoint"
         ],
         "modmenu": [
-	        "net.darkz70.figurestone.modmenu.ModMenuIntegration"
+	        "net.darkz70.levreach.modmenu.ModMenuIntegration"
         ]
     },
     "depends": {

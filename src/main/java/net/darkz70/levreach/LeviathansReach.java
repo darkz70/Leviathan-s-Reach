@@ -1,15 +1,15 @@
-package net.darkz70.figurestone;
+package net.darkz70.levreach;
 
-import net.darkz70.figurestonelib.logger.FigureStoneLogger;
+import net.darkz70.figurestonelib.logger.LeviathansReachLogger;
 import net.minecraft.network.chat.*;
 import net.minecraft.resources.Identifier;
 
-public class FigureStone {
+public class LeviathansReach {
 
-	public static final String MOD_NAME = /*$ mod_name*/ "FigureStone";
-	public static final String MOD_ID = /*$ mod_id*/ "figurestone";
+	public static final String MOD_NAME = /*$ mod_name*/ "LeviathansReach";
+	public static final String MOD_ID = /*$ mod_id*/ "levreach";
 
-	public static FigureStoneLogger LOGGER = new FigureStoneLogger(FigureStone.MOD_NAME);
+	public static LeviathansReachLogger LOGGER = new LeviathansReachLogger(LeviathansReach.MOD_NAME);
 
 	public static Identifier id(String path) {
 		//? if >=1.21 {
