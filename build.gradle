@@ -4,7 +4,7 @@ plugins {
 	id "net.darkz70.figurestone-plugin-core" version "$figurestone_plugin_version"
 }
 
-levreachDependencies {
+figurestoneDependencies {
 	minecraft = stonecutter.current.project.substring(stonecutter.current.project.indexOf("-") + 1)
 	lombok = prop("base.lombok_version")
 
@@ -17,13 +17,13 @@ levreachDependencies {
 	parchment = prop("build.parchment")
 
 	additional {
-		// TIP: Don't use modImplementation, use levreachImplementation and etc.
-		//override("levreachCompileOnly", "yacl")
+		// TIP: Don't use modImplementation, use figurestoneImplementation and etc.
+		//override("figurestoneCompileOnly", "yacl")
 		//disable("yacl")
 	}
 }
 
-levreachResources {
+figurestoneResources {
 	//expandFiles = ["file pattern"]
 	customProperty("figurestonelib_version", LeviathansReachUtils.substringBefore(prop("dep.figurestonelib"), "+"))
 }
