@@ -33,7 +33,7 @@ jobs:
           GITHUB_ACTOR: darkz70
           GITHUB_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}
        - name: build neoforge
-        run: ./gradlew buildAndCollect+forge+All
+        run: ./gradlew buildAndCollect+neoforge+All
         env:
           GITHUB_ACTOR: darkz70
           GITHUB_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}
